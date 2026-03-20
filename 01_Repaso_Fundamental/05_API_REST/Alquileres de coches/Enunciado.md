@@ -24,14 +24,19 @@ Dado que estamos creando alquileres dentro de la sesión del usuario y desde dic
 
 •  **Buscar Coches Disponibles:** Un endpoint que permita a los usuarios buscar coches disponibles utilizando parámetros de consulta como marca, modelo, tipo de combustible, tipo de caja de cambios y número de plazas.
 
-Para solucionar este ejercicio, se recomienda seguir los siguientes pasos:
-1. **Identificar los recursos principales**: Analiza el enunciado y determina sobre qué recursos tiene sentido ejecutar operaciones.
+Para solucionar este ejercicio, se recomienda seguir los siguientes pasos:1 **Identificar los recursos principales**: Analiza el enunciado y determina sobre qué recursos tiene sentido ejecutar operaciones.
 2. **Definir los endpoints**: Crea una lista de endpoints que representen las operaciones que se pueden realizar sobre los recursos identificados. Para cada endpoint, indica el método HTTP que se utilizará y los parámetros necesarios (path params) u opcionales (query params), así como el cuerpo de la petición y la respuesta esperada.
 
 Si lo deseas, puedes utilizar el siguiente formato para tu solución:
 
 (Los path params, al ser obligatorios, se pueden incluir directamente en el endpoint, mientras que los query params se pueden indicar como opcionales)
 
-| Método Http | Endpoint  | Query Params | Cuerpo JSON de la petición | Respuesta JSON de la petición | Códigos HTTP de respuesta posibles |
-|-------------|-----------|--------------|----------------------------|-------------------------------|------------------------------------|
-| Método      | /endpoint | nombreParam1 | `{ }`                      | `{ }`                         | 201 Created <br/>400 Bad Request   |
+| Método Http | Endpoint              | Query Params                            | Cuerpo JSON de la petición                                            | Respuesta JSON de la petición                                                                                                                     | Códigos HTTP de respuesta posibles                |
+|-------------|-----------------------|-----------------------------------------|-----------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------|
+| POST        | /users                |                                         | `{ "name": "Raúl", "email": "raul@gmail.com", password: "pollo123" }` | `{ id: 1, "name": "Raúl", "email": "raul@gmail.com" }`                                                                                            | 21Created <br/>400 Bad Request                    |
+| GET         | /users/{userId}       |                                         |                                                                       | `{ id: 1, "name": "Raúl", "email": "raul@gmail.com" }`                                                                                            | 200 Ok <br/>404 Not Found                         |
+| PATCH       | /users/{userId}       |                                         | `{ "email": "raul@gmail.com", password: "pollo123" }`                 | `{ id: 1, "name": "Raúl", "email": "raul@gmail.com" }`                                                                                            | 200 Ok <br/>400 Bad Request <br/>404 Not Found    |
+| DELETE      | /users/{userId}       |                                         |                                                                       | `{ "message": "User deleted successfully" }`                                                                                                      | 200 Ok <br/>204 Deleted <br/> 404 Not Found       |
+| POST        | /users/{userId}/rents |                                         | `{ "car_id": 1, "rent_date": "01/01/2026" }`                          | `{ "rent_id": 1, "user_id": 1, "car_id": 1, "rent_date": "01/01/2026" }`                                                                          | 21Created <br/>400 Bad Request <br/>404 Not Found |
+| GET         | /users/{userId}/rents |                                         |                                                                       | `[{ "rent_id": 1, "user_id": 1, "car_id": 1, "rent_date": "01/01/2026" }, { "rent_id": 2, "user_id": 1, "car_id": 2, "rent_date": "02/12026" }]`  | 200 Ok <br/>404 Not Found                         |
+| GET         | /cars                 | brand, model, fuel, transmission, seats |                                                                       | `[{ "car_id": 1, "brand": "seat", "model": "leon", "fuel": "gasoil", "transmission": "manual", seats: "5", "rented": true }, ... ]`               | 200 Ok <br/>404 Not Found                         |
