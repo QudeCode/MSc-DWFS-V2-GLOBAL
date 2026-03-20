@@ -21,6 +21,12 @@ Si lo deseas, puedes utilizar el siguiente formato para tu solución:
 
 (Los path params, al ser obligatorios, se pueden incluir directamente en el endpoint, mientras que los query params se pueden indicar como opcionales)
 
-| Método Http | Endpoint  | Query Params | Cuerpo JSON de la petición | Respuesta JSON de la petición | Códigos HTTP de respuesta posibles |
-|-------------|-----------|--------------|----------------------------|-------------------------------|------------------------------------|
-| Método      | /endpoint | nombreParam1 | `{ }`                      | `{ }`                         | 201 Created <br/>400 Bad Request   |
+| Método Http | Endpoint                   | Query Params | Cuerpo JSON de la petición | Respuesta JSON de la petición                                                           | Códigos HTTP de respuesta posibles                              |
+|-------------|----------------------------|--------------|----------------------------|-----------------------------------------------------------------------------------------|-----------------------------------------------------------------|
+| POST        | /sumas                     |              | `{ "numbers": [2,2,2,2] }` | `{ "operation_id": 1, "numbers": [2,2,2,2], "solution": 8, "operation": "suma" }`       | 201 Created <br/>400 Bad Request <br/>500 Internal Server Error |
+| POST        | /restas                    |              | `{ "numbers": [2,2,2,2] }` | `{ "operation_id": 2, "numbers": [2,2,2,2], "solution": -4, "operation": "resta" }`     | 201 Created <br/>400 Bad Request <br/>500 Internal Server Error |
+| POST        | /multiplicaciones          |              | `{ "numbers": [2,2] }`     | `{ "operation_id": 3, "numbers": [2,2], "solution": 4, "operation": "multiplicacion" }` | 201 Created <br/>400 Bad Request <br/>500 Internal Server Error |
+| POST        | /dividisiones              |              | `{ "numbers": [4,2] }`     | `{ "operation_id": 4, "numbers": [4,2], "solution": 2, "operation": "division" }`       | 201 Created <br/>400 Bad Request <br/>500 Internal Server Error |
+| POST        | /raices                    |              | `{ "numbers": [4,2] }`     | `{ "operation_id": 5, "numbers": [4,2], "solution": 3, "operation": "raiz" }`           | 201 Created <br/>400 Bad Request <br/>500 Internal Server Error |
+| POST        | /potencias                 |              | `{ "numbers": [2,3] }`     | `{ "operation_id": 6, "numbers": [2,3], "solution": 8, "operation": "potencia" }`       | 201 Created <br/>400 Bad Request <br/>500 Internal Server Error |
+| GET         | /operaciones/{operationId} |              |                            | `{ "operation_id": 6, "numbers": [2,3], "solution": 8, "operation": "potencia" }`       | 200 Ok <br/>404 Not Found <br/>500 Internal Server Error        |
