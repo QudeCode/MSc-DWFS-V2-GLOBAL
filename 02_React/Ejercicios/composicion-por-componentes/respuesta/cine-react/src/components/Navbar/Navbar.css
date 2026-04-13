@@ -1,0 +1,13 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 0 var(--padding-x);
+}
+
+.navBar_links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}

@@ -51,16 +51,16 @@ Crea un archivo `src/data/movies.js` que exporte:
 
 ### Componentes obligatorios
 
-| Componente | Descripción |
-|---|---|
-| `Navbar` | Barra de navegación superior con logo y links. Recibe la lista de links por props. |
-| `Footer` | Barra inferior con copyright. Recibe el año por props. |
-| `Sidebar` | Panel lateral izquierdo. Contiene la lista de géneros y una card de película destacada. |
-| `GenreList` | Lista de géneros. **Debe usar `.map()` sobre el array de géneros.** |
-| `MovieCard` | Tarjeta individual de película. Recibe un objeto película completo por props. |
-| `MovieGrid` | Cuadrícula de películas. **Debe usar `.map()` sobre el array de películas** para renderizar un `<MovieCard>` por cada una. |
-| `PageLayout` | Envuelve el `<Sidebar>` y el área principal (`<main>`). Usa `children` para el contenido principal. |
-| `App` | Componente raíz. Importa los datos y orquesta el layout completo. |
+| Componente   | Descripción                                                                                                                |
+|--------------|----------------------------------------------------------------------------------------------------------------------------|
+| `Navbar`     | Barra de navegación superior con logo y links. Recibe la lista de links por props.                                         |
+| `Footer`     | Barra inferior con copyright. Recibe el año por props.                                                                     |
+| `Sidebar`    | Panel lateral izquierdo. Contiene la lista de géneros y una card de película destacada.                                    |
+| `GenreList`  | Lista de géneros. **Debe usar `.map()` sobre el array de géneros.**                                                        |
+| `MovieCard`  | Tarjeta individual de película. Recibe un objeto película completo por props.                                              |
+| `MovieGrid`  | Cuadrícula de películas. **Debe usar `.map()` sobre el array de películas** para renderizar un `<MovieCard>` por cada una. |
+| `PageLayout` | Envuelve el `<Sidebar>` y el área principal (`<main>`). Usa `children` para el contenido principal.                        |
+| `App`        | Componente raíz. Importa los datos y orquesta el layout completo.                                                          |
 
 ### Estructura de carpetas sugerida
 

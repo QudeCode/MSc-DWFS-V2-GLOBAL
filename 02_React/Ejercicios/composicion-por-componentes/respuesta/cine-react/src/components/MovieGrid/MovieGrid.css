@@ -1,0 +1,15 @@
+#movieGrid {
+    width: 85%;
+    padding-left: 2rem;
+    padding-right: var(--padding-x);
+}
+
+.movieGridTitle {
+    text-align: left;
+}
+
+.movies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
