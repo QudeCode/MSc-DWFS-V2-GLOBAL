@@ -1,11 +1,11 @@
 import './MovieCard.css';
 
-export default function MovieCard() {
+export default function MovieCard({ movie }) {
   return <article className='movieCard' id='1'>
-    <img src="" alt="" />
-    <h3 className='movieCardTitle'>Title</h3>
-    <p>genero</p>
-    <p>rating</p>
-    <p>ver más</p>
+    <p className='img'>{movie.image}</p>
+    <h3 className='movieCardTitle'>{movie.title}</h3>
+    <p>{movie.genre}</p>
+    <p>{movie.rating}</p>
+    <p>Ver más...</p>
   </article>;
 }

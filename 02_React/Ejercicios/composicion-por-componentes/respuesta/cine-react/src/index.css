@@ -29,7 +29,7 @@
     font-size: 16px;
   }
 
-  --padding-x: 1.5rem;
+  --padding-x: 1rem;
 }
 
 @media (prefers-color-scheme: dark) {
