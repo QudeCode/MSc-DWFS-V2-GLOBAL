@@ -1,7 +1,7 @@
 import './Footer.css';
 
-export default function Footer() {
+export default function Footer({ year }) {
   return <footer>
-    © 2026 CineReact · Todos los derechos reservados
+    © {year} CineReact · Todos los derechos reservados
   </footer>;
 }

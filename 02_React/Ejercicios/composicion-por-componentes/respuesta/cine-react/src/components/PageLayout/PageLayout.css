@@ -1,3 +1,7 @@
+main {
+  width: auto;
+}
+
 .pageLayout {
   display: flex;
   height: 100%;

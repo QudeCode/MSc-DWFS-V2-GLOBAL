@@ -1,12 +1,12 @@
 import './PageLayout.css';
 import Sidebar from '../Sidebar/Sidebar';
-import MovieGrid from '../MovieGrid/MovieGrid';
 
-export default function PageLayout({ genres, movies, featuredMovie }) {
+export default function PageLayout({ genres, featuredMovie, children }) {
   return (
   <div className='pageLayout'>
     <Sidebar genres={genres} featuredMovie={featuredMovie}></Sidebar>
-    <MovieGrid movies={movies}></MovieGrid>
+    {/* error grabe: no poner main */}
+    <main className="main">{children}</main> 
   </div>
   );
 }
