@@ -1,1 +1,14 @@
-/* Este archivo CSS contiene estilos específicos para el componente FilterBar */
+.filter-bar {
+    display: flex;
+    flex-direction: row;
+}
+
+ul {
+    display: flex;
+    gap: 1rem;
+    padding: 0 0 0 3rem;
+}
+
+li {
+    list-style: none;
+}

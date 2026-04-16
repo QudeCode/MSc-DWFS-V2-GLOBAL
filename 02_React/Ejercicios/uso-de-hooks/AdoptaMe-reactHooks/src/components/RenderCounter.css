@@ -1,9 +1,4 @@
-.render-counter {
-    font-size: 16px;
-    color: #333;
-    margin: 10px 0;
-}
-
-.render-counter span {
-    font-weight: bold;
+.render-counter { 
+    border-top: 1px solid #ccc;
+    padding: 0.5rem;
 }

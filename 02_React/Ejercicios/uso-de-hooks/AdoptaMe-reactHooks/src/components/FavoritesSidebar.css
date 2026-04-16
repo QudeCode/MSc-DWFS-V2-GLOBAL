@@ -1,3 +1,30 @@
-/react-ts-project/react-ts-project/src/components/FavoritesSidebar/FavoritesSidebar.css
+.favorites-sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40%;
+    height: auto;
+    border-left: 1px solid #ccc;
+}
 
-/* Este archivo CSS contiene estilos específicos para el componente FavoritesSidebar. */
+h2 {
+    margin: 2rem 4rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.favorites-list {
+    padding: 0 4rem;
+}
+
+.favorite-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.favorites-counter {
+    margin-bottom: 2rem;
+}

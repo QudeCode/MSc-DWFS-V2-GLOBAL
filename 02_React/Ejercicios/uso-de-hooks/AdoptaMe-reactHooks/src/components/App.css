@@ -1,3 +1,22 @@
-/react-ts-project/react-ts-project/src/components/App/App.css
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    width: auto;
+}
 
-/* Este archivo CSS contiene estilos específicos para el componente App. */
+.app {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+
+.content {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+}
