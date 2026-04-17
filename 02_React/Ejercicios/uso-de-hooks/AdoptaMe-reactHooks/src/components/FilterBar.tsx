@@ -4,7 +4,6 @@ import './FilterBar.css';
 
 export default function FilterBar() {
 
-
     return (
         <div className="filter-bar">
             <p>Filtrar por:</p> 

@@ -7,7 +7,7 @@ import './App.css';
 import type { animal } from "../interfaces/animals";
 import { MOCK_DATA } from "../hooks/useAnimals";
 import { GlobalContext } from "../context/AppContext";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 
 // useEffect sin deps, orquesta todo
 
@@ -17,9 +17,10 @@ const favorites: animal[] = animals.filter((animal: animal) => animal.id === "d1
 
 export default function App() {
     const { darkMode } = useContext(GlobalContext);
-    let renders: number = 0;
+    const renders = useRef(0);
+
     useEffect(() => {
-        renders += 1;
+        renders.current = renders.current + 1;
     });
     
     return (
@@ -33,7 +34,7 @@ export default function App() {
             <FavoritesSidebar username={userName} favorites={favorites}></FavoritesSidebar>
             </div>
             <footer>
-                <RenderCounter renders={renders}></RenderCounter>
+                <RenderCounter renders={renders.current}></RenderCounter>
             </footer>
         </div>
     );
