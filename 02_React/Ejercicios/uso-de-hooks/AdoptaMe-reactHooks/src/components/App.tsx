@@ -4,16 +4,14 @@ import FilterBar from "./FilterBar";
 import Header from "./Header";
 import RenderCounter from "./RenderCounter";
 import './App.css';
-import type { animal } from "../interfaces/animals";
 import { MOCK_DATA } from "../hooks/useAnimals";
 import { GlobalContext } from "../context/AppContext";
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef } from "react";
 
 // useEffect sin deps, orquesta todo
 
 const userName: string = "Ada";
 const animals = MOCK_DATA;
-const favorites: animal[] = animals.filter((animal: animal) => animal.id === "d1" || animal.id === "c2" || animal.id === "r1");
 
 export default function App() {
     const { darkMode } = useContext(GlobalContext);
@@ -31,7 +29,7 @@ export default function App() {
                 <FilterBar></FilterBar>
                 <AnimalGrid animals={animals}></AnimalGrid>
             </main>
-            <FavoritesSidebar username={userName} favorites={favorites}></FavoritesSidebar>
+            <FavoritesSidebar username={userName}></FavoritesSidebar>
             </div>
             <footer>
                 <RenderCounter renders={renders.current}></RenderCounter>
