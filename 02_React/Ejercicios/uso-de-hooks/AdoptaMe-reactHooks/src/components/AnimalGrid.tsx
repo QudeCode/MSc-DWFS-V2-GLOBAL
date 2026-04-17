@@ -1,10 +1,13 @@
-import type { animal } from '../interfaces/animals';
+import { useContext } from 'react';
 import AnimalCard from './AnimalCard';
 import './AnimalGrid.css';
+import { GlobalContext } from '../context/AppContext';
 
 // useEffect con [animals]
 
-export default function  AnimalGrid({animals}: {animals: animal[]}) {
+export default function  AnimalGrid() {
+
+    const { animals } = useContext(GlobalContext)
 
     return (
         <div className="animals-content">

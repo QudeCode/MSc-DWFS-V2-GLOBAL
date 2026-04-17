@@ -14,7 +14,7 @@ export default function AnimalCard({animal}: {animal: animal}) {
             <h3>{animal.name}</h3>
             <p>{animal.breed}</p>
             <p>Edad: {animal.age} {animal.age > 1 ? "años" : "año"}</p>
-            <button onClick={() => swapFavorite(animal)}>{favorites.includes(animal) ? "🤍 Add" : "❤️ Fav"}</button>
+            <button onClick={() => swapFavorite(animal)}>{favorites.includes(animal) ? "❤️ Fav" : "🤍 Add"}</button>
 
         </article>
     );

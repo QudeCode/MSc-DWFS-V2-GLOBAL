@@ -2,7 +2,9 @@ import { useContext } from 'react';
 import { GlobalContext } from '../context/AppContext';
 import './Header.css';
 
-export default function Header({ userName }) {
+import { userName } from '../context/AppContext';
+
+export default function Header() {
     // consume useContext
     const { toggleDarkMode } = useContext(GlobalContext);
 

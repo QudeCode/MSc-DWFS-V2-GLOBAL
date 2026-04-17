@@ -4,14 +4,10 @@ import FilterBar from "./FilterBar";
 import Header from "./Header";
 import RenderCounter from "./RenderCounter";
 import './App.css';
-import { MOCK_DATA } from "../hooks/useAnimals";
 import { GlobalContext } from "../context/AppContext";
 import { useContext, useEffect, useRef } from "react";
 
 // useEffect sin deps, orquesta todo
-
-const userName: string = "Ada";
-const animals = MOCK_DATA;
 
 export default function App() {
     const { darkMode } = useContext(GlobalContext);
@@ -23,13 +19,13 @@ export default function App() {
     
     return (
         <div className={`app ${darkMode ? 'dark-mode' : ''}`} >
-            <Header userName={userName}></Header>
+            <Header></Header>
             <div className="content">
             <main>
                 <FilterBar></FilterBar>
-                <AnimalGrid animals={animals}></AnimalGrid>
+                <AnimalGrid></AnimalGrid>
             </main>
-            <FavoritesSidebar username={userName}></FavoritesSidebar>
+            <FavoritesSidebar></FavoritesSidebar>
             </div>
             <footer>
                 <RenderCounter renders={renders.current}></RenderCounter>

@@ -1,6 +1,6 @@
 // Custom Hook: carga y filtrado de animales
 
-export const MOCK_DATA = [
+const MOCK_DATA = [
     { id: "d1", name: "Rocky",   species: "dog",    emoji: "🐶", breed: "Labrador",       age: 2 },
     { id: "d2", name: "Luna",    species: "dog",    emoji: "🐕", breed: "Border Collie",  age: 4 },
     { id: "d3", name: "Max",     species: "dog",    emoji: "🦮", breed: "Golden Retriever", age: 1 },
@@ -10,3 +10,20 @@ export const MOCK_DATA = [
     { id: "r1", name: "Pelusa",  species: "rabbit", emoji: "🐰", breed: "Angora",         age: 1 },
     { id: "r2", name: "Thumper", species: "rabbit", emoji: "🐇", breed: "Holandés",       age: 3 },
 ];
+
+// Custom Hook: gestión de favoritos
+import { useState } from "react";
+import type { animal } from "../interfaces/animals";
+
+export function useAnimals() { 
+    const [ animals, setAnimals ] = useState<animal[]>(MOCK_DATA)
+
+    function filterAnimals(specie: string) {
+        console.log("[filterAnimals] current animals: ", animals, ", specieSelected: ", specie)
+
+        if(specie === "all") setAnimals(MOCK_DATA) 
+            else setAnimals(MOCK_DATA.filter((animal) => animal.species === specie))
+    }
+
+    return { animals, filterAnimals }
+}
