@@ -2,16 +2,16 @@ import { useContext } from 'react';
 import { GlobalContext } from '../context/AppContext';
 import './Header.css';
 
-// consume useContext
-const { darkMode, toggleDarkMode } = useContext(GlobalContext);
-
 export default function Header({ userName }) {
+    // consume useContext
+    const { toggleDarkMode } = useContext(GlobalContext);
+
     return (
         <header className="header">
             <h1>🐾 AdoptaMe</h1>
             <p>Encuentra tu compañero ideal</p>
             {userName ? <p>👤 {userName}</p> : ''}
-            <button onClick={() => toggleDarkMode(darkMode)}>☀️/🌙</button>
+            <button onClick={toggleDarkMode}>☀️/🌙</button>
         </header>
     );
 };

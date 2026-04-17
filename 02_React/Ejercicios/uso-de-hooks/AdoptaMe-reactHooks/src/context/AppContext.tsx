@@ -1,22 +1,16 @@
-// // createContext + AppProvider + useAppContext
-
-interface AppContextType {
-    darkMode: boolean;
-    toggleDarkMode: (darkMode: boolean) => void;
-  }
-
 import { createContext, useState } from "react";
+// createContext + AppProvider + useAppContext
 
-export const GlobalContext = createContext<AppContextType | undefined>(undefined);
+// 1. Crear el Almacén (Contexto)
+export const GlobalContext = createContext<any>(null);
 
-export function GlobalProvider({ children }) {
+// 2. Crear el Proveedor (El que reparte la lógica)
+export function GlobalProvider({ children }: any) {
   const [darkMode, setDarkMode] = useState(false);
+
   const toggleDarkMode = () => {
-    console.log("toggleDarkMode", darkMode);
-    setDarkMode((v) => {
-        console.log("toggleDarkMode setDarkMode", v);
-        return !v
-    })
+    console.log("Toggling dark mode: ", !darkMode);
+    setDarkMode(!darkMode)
   };
 
   return (
@@ -25,4 +19,3 @@ export function GlobalProvider({ children }) {
     </GlobalContext.Provider>
   );
 }
-

@@ -9,7 +9,7 @@ export default function FavoritesSidebar({username, favorites}: {username: strin
             <h2>❤️ Favoritos de {username}</h2>
             <div className='favorites-list'>
                 {favorites.map((animal: animal) => (
-                    <div className='favorite-item'>
+                    <div className='favorite-item' key={animal.id}>
                         <p className='animal-name'>{animal.emoji} {animal.name}</p><p className='raza'>· {animal.breed}</p><button className='close-button'>X</button>
                     </div>
                 ))}

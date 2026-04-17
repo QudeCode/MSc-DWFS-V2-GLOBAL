@@ -6,7 +6,8 @@ import RenderCounter from "./RenderCounter";
 import './App.css';
 import type { animal } from "../interfaces/animals";
 import { MOCK_DATA } from "../hooks/useAnimals";
-import { GlobalProvider } from "../context/AppContext";
+import { GlobalContext } from "../context/AppContext";
+import { useContext } from "react";
 
 // useEffect sin deps, orquesta todo
 
@@ -15,22 +16,21 @@ const animals = MOCK_DATA;
 const favorites: animal[] = animals.filter((animal: animal) => animal.id === "d1" || animal.id === "c2" || animal.id === "r1");
 
 export default function App() {
-
+    const { darkMode } = useContext(GlobalContext);
+    
     return (
-        <GlobalProvider>
-            <div className="app">
-                <Header userName={userName}></Header>
-                <div className="content">
-                <main>
-                    <FilterBar></FilterBar>
-                    <AnimalGrid animals={animals}></AnimalGrid>
-                </main>
-                <FavoritesSidebar username={userName} favorites={favorites}></FavoritesSidebar>
-                </div>
-                <footer>
-                    <RenderCounter></RenderCounter>
-                </footer>
+        <div className={`app ${darkMode ? 'dark-mode' : ''}`} >
+            <Header userName={userName}></Header>
+            <div className="content">
+            <main>
+                <FilterBar></FilterBar>
+                <AnimalGrid animals={animals}></AnimalGrid>
+            </main>
+            <FavoritesSidebar username={userName} favorites={favorites}></FavoritesSidebar>
             </div>
-        </GlobalProvider>
+            <footer>
+                <RenderCounter></RenderCounter>
+            </footer>
+        </div>
     );
 };

@@ -11,7 +11,7 @@ export default function  AnimalGrid({animals}: {animals: animal[]}) {
             <p>{animals.length} animales disponibles</p>
             <div className='animals-grid'>
                 {animals.map((animal) => (
-                    <AnimalCard animal={animal}></AnimalCard>
+                    <AnimalCard key={animal.id} animal={animal}></AnimalCard>
                 ))}
             </div>
 

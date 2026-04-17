@@ -5,13 +5,13 @@ import './AnimalCard.css';
 
 export default function AnimalCard({animal}: {animal: animal}) { 
     return (
-        <div className="animal-card">
+        <article key={animal.id} className="animal-card">
             <p>{animal.emoji}</p>
             <h3>{animal.name}</h3>
             <p>{animal.breed}</p>
-            <p>{animal.age}</p>
+            <p>Edad: {animal.age} {animal.age > 1 ? "años" : "año"}</p>
             <button>❤️ Fav</button>
 
-        </div>
+        </article>
     );
 };
