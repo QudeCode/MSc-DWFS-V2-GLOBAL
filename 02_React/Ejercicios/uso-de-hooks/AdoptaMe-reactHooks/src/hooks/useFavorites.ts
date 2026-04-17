@@ -1,0 +1,1 @@
+// Custom Hook: gestión de favoritos

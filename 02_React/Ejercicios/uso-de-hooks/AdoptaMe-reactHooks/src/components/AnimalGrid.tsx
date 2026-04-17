@@ -2,6 +2,8 @@ import type { animal } from '../interfaces/animals';
 import AnimalCard from './AnimalCard';
 import './AnimalGrid.css';
 
+// useEffect con [animals]
+
 export default function  AnimalGrid({animals}: {animals: animal[]}) {
 
     return (

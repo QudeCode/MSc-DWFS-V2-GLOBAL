@@ -1,6 +1,10 @@
 import './FilterBar.css';
 
+// botones de filtro
+
 export default function FilterBar() {
+
+
     return (
         <div className="filter-bar">
             <p>Filtrar por:</p> 

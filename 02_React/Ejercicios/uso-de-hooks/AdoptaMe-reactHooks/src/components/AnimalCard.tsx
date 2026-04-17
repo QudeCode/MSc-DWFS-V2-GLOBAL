@@ -1,6 +1,7 @@
 import type { animal } from '../interfaces/animals';
 import './AnimalCard.css';
 
+// consume useContext + useFavorites
 
 export default function AnimalCard({animal}: {animal: animal}) { 
     return (

@@ -6,6 +6,9 @@ import RenderCounter from "./RenderCounter";
 import './App.css';
 import type { animal } from "../interfaces/animals";
 import { MOCK_DATA } from "../hooks/useAnimals";
+import { GlobalProvider } from "../context/AppContext";
+
+// useEffect sin deps, orquesta todo
 
 const userName: string = "Ada";
 const animals = MOCK_DATA;
@@ -14,18 +17,20 @@ const favorites: animal[] = animals.filter((animal: animal) => animal.id === "d1
 export default function App() {
 
     return (
-        <div className="app">
-            <Header userName={userName}></Header>
-            <div className="content">
-            <main>
-                <FilterBar></FilterBar>
-                <AnimalGrid animals={animals}></AnimalGrid>
-            </main>
-            <FavoritesSidebar username={userName} favorites={favorites}></FavoritesSidebar>
+        <GlobalProvider>
+            <div className="app">
+                <Header userName={userName}></Header>
+                <div className="content">
+                <main>
+                    <FilterBar></FilterBar>
+                    <AnimalGrid animals={animals}></AnimalGrid>
+                </main>
+                <FavoritesSidebar username={userName} favorites={favorites}></FavoritesSidebar>
+                </div>
+                <footer>
+                    <RenderCounter></RenderCounter>
+                </footer>
             </div>
-            <footer>
-                <RenderCounter></RenderCounter>
-            </footer>
-        </div>
+        </GlobalProvider>
     );
 };

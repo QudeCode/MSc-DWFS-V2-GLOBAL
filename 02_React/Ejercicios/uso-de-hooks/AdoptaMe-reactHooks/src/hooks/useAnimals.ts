@@ -1,3 +1,5 @@
+// Custom Hook: carga y filtrado de animales
+
 export const MOCK_DATA = [
     { id: "d1", name: "Rocky",   species: "dog",    emoji: "🐶", breed: "Labrador",       age: 2 },
     { id: "d2", name: "Luna",    species: "dog",    emoji: "🐕", breed: "Border Collie",  age: 4 },

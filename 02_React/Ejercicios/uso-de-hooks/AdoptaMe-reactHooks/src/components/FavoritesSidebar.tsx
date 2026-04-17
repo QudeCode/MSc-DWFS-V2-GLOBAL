@@ -1,6 +1,8 @@
 import type { animal } from '../interfaces/animals';
 import './FavoritesSidebar.css';
 
+// reutiliza useFavorites
+
 export default function FavoritesSidebar({username, favorites}: {username: string, favorites: animal[]}) {
     return (
         <aside className="favorites-sidebar">
