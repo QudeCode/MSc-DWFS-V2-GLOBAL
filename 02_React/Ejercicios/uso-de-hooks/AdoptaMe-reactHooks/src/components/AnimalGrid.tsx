@@ -18,7 +18,7 @@ export default function  AnimalGrid() {
                 ))}
             </div>
 
-            <p>... más animales ...</p>
+            {/* <p>... más animales ...</p> */}
         </div>
     );
 };
