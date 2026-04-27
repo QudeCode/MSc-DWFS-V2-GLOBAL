@@ -1,23 +1,11 @@
-.app {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100vh;
-    width: 100%;
-}
+/* 1. Definición del Marco General */
+.app-container {
+    display: grid;
+    /* Fila 1 (Navbar): Se ajusta al tamaño del contenido.
+        Fila 2 (Cuerpo): Se expande (1fr) para ocupar todo el espacio sobrante.
+        Fila 3 (Footer): Se ajusta al tamaño del contenido. */
+    grid-template-rows: auto 1fr auto;
 
-.content {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-main {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem 2rem;
-    width: auto;
+    /* Crucial: La app mide al menos el 100% de la ventana */
+    min-height: 100vh;
 }

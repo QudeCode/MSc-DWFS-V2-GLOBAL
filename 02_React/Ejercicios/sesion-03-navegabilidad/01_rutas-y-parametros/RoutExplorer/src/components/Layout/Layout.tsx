@@ -1,9 +1,15 @@
+import { Outlet } from 'react-router-dom';
+import { useLogger } from '../../hooks/useLogger';
 import './Layout.css';
 
 export default function Layout() {
-    
+    useLogger(Layout.name)
+
     return (
-        <div className={'layout'} >
-        </div>
+        <main className={'main-content'}>
+            <div className="content-wrapper">
+                <Outlet />
+            </div>
+        </main>
     );
 };

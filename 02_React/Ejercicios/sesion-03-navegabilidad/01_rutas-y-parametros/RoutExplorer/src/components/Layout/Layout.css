@@ -1,0 +1,13 @@
+.main-content {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+}
+
+.content-wrapper {
+    width: 100%;
+    max-width: 1200px; /* Ancho máximo para una lectura óptima */
+    margin: 0 auto; /* Centrado horizontal */
+    padding: 0 4rem; /* Espacio de seguridad lateral */
+    box-sizing: border-box;
+}

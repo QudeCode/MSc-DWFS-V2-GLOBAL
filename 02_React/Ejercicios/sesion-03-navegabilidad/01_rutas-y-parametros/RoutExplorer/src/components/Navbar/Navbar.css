@@ -1,0 +1,26 @@
+/* 2. Comportamiento de la Navegación */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100; /* Asegura que esté por encima del contenido */
+    padding: 1rem 4rem;
+    border-bottom: 1px solid #ccc;
+    background-color: var(--bg);
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    list-style: none;
+    
+    li {
+        text-decoration: underline;
+    }
+}
