@@ -1,0 +1,56 @@
+:root {
+  /* Variables (Set directly to Dark Mode) */
+  --bg: #16171d;
+  --text: #ccc;
+  --text-h: #f3f4f6;
+  --border: #2e303a;
+  --accent: #c084fc;
+  --accent-bg: rgba(192, 132, 252, 0.15);
+  --accent-border: rgba(192, 132, 252, 0.5);
+  --shadow: rgba(0, 0, 0, 0.4) 0 10px 15px -3px;
+  
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Reset básico y estilos globales */
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font: 18px/145% var(--sans);
+  min-height: 100vh;
+}
+
+/* Tipografía */
+h1, h2, h3, h4, strong {
+  color: var(--text-h);
+}
+
+a {
+  color: var(--text);
+}
+
+/* Componentes */
+button {
+  font: inherit;
+  color: var(--text-h);
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-border);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+p {
+  margin: 0.5em 0;
+}
+
+/* Iconos (Ya que son oscuros por defecto, aplicamos el filtro siempre) */
+#social .button-icon {
+  filter: invert(1) brightness(2);
+}
