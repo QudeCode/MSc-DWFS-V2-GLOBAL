@@ -11,3 +11,20 @@
     padding: 0 4rem; /* Espacio de seguridad lateral */
     box-sizing: border-box;
 }
+
+.products-content {
+    display: grid;
+    /* Definimos 3 columnas de igual ancho */
+    grid-template-columns: repeat(3, 1fr); 
+    /* Espacio entre celdas */
+    gap: 3rem;
+  }
+
+.product-card {
+    width: 1fr;
+    margin: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px #ccc;
+    padding: 0.75rem 1.5rem;
+}

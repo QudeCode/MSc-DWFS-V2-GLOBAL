@@ -11,4 +11,3 @@ export const products = [
   { id: 8, name: "Teclado Mecánico", category: "Electrónica", price: 149 },
   { id: 9, name: "Juego de Sábanas", category: "Hogar", price: 55 },
 ];
-

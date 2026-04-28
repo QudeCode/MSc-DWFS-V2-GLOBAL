@@ -1,20 +1,13 @@
 import { users as rawUsers } from '../data/users'
+import type { User } from '../interfaces/User';
 
-const users: user[] = rawUsers;
-
-interface user {
-    id: number
-    name: string
-    email: string
-    bio: string
-    avatar: string
-}
+const users: User[] = rawUsers;
 
 /**
  * Hook para gestionar los usuarios
  * @param userId Id del usuario
  */
-export const useUsers = (userId?: string): user[] => {
+export const useUsers = (userId?: string): User[] => {
     // Sin useState porque no vamos a añadir users
     // const [ users, setUsers ] = useState<user[]>(users);
 
