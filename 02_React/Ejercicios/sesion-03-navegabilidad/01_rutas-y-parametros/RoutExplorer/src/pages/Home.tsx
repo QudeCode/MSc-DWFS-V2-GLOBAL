@@ -12,8 +12,8 @@ export default function Home() {
                 <ul>
                     <li><Link to="/users/1">Ana García</Link></li>
                     <li><Link to="/users/2">Carlos López</Link></li>
-                    <li><Link to="/products/1">Laptop Pro 15</Link></li>
-                    <li><Link to="/products/2">Auriculares Bluetooth</Link></li>
+                    <li><Link to="/products?productId=1">Laptop Pro 15</Link></li>
+                    <li><Link to="/products?productId=2">Auriculares Bluetooth</Link></li>
                 </ul>
             </section>
         </div>

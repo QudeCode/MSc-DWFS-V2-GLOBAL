@@ -24,7 +24,7 @@ export default function App() {
                         <Route index element={<Home/>}/>
                         <Route path="about" element={<AboutUs/>}/>
                         <Route path="users/:userId" element={<UserProfile/>}/>
-                        <Route path="products/:productId" element={<Products/>}/>
+                        <Route path="products?" element={<Products/>}/>
                     </Route>
                 </Routes>
                 <Footer year={year} reactRouterVersion={reactRouterVersion}></Footer>

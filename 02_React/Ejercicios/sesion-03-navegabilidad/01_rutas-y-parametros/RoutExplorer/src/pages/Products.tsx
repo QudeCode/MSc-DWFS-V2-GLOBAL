@@ -1,13 +1,13 @@
-import { useParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import { useLogger } from "../hooks/useLogger";
 
 export default function Products() {
     useLogger(Products.name)
-    const { productId } = useParams();
+    const [ params ] = useSearchParams();
     
     return (
         <div className={'products'} >
-            <p>productId: {productId}</p>
+            <p>params: {params.toString()}</p>
         </div>
     );
 };
