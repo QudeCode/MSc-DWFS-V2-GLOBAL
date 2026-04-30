@@ -20,5 +20,12 @@ export const users = [
     bio: "Diseñadora UX/UI con enfoque en design systems y prototipado rápido. Amante del minimalismo y la tipografía.",
     avatar: "🎨",
   },
+  {
+    id: 4,
+    name: "Administrador",
+    email: "admin@routexplorer.com",
+    bio: "Administrador del sistema",
+    avatar: "🔨",
+  },
 ];
 

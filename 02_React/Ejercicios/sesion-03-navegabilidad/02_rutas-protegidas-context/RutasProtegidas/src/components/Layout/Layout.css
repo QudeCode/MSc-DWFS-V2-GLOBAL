@@ -28,3 +28,22 @@
     box-shadow: 0 2px 5px #ccc;
     padding: 0.75rem 1.5rem;
 }
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.input-field {
+    margin-top: 1rem;
+
+    display: grid;
+    grid-template-columns: repeat(2, 10rem); 
+
+}
+
+.error-banner {
+    color: red !important;
+}
